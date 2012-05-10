@@ -1,17 +1,20 @@
-1- Fiyatlarını takip etmek istediğiniz ürünün adapter ve url bilgilerini jobs.csv dosyasına ( ) ile ayrılmış şekilde yazınız.
+Web Crawler, popüler bazı elektronik ticaret siteleri ve bankaların spesifik sayfalarındaki ürün fiyatı, adı ve görseli gibi verileri toplamak için kulllanılan veri toplama aracıdır. Araç, Vatan Bilgisayar ürün detayı sayfası, Gold Bilgisayar ürün detayı sayfası, Zizigo ürün detayı sayfası, Garanti Bankası ve İş bankası ana sayfadaki altın fiyatlarını tanımaktadır.
 
-Soz Dizimi:
-Crawler [Vatan|Teknosa|Gold|Zizigo|GarantiAltin] [Urun detay sayfası url si]
-Ornek:
-Vatan http://www.vatanbilgisayar.com/Cep%20Telefonu/samsung-sam_gt-s5360maatur-s5360-galaxy-y-cep-telefonu-(gri)/productdetails.aspx?I_ID=57947
-
-2- jobs.csv ye eklediğiniz crawling işlemlerini başlatmak için
-php index.php 
-komutunu çalıştırınız. Crawle edilen datalara data.csv dosyasında aşağıdaki formatta ulaşabilirsiniz.
-format:
-Zaman;ürün adı;fiyat;para birimi;ürün görseli
+Ürün fiyatı toplamak için jobs.csv dosyasına aşağıdaki formatta girdi yapmanız gerekmektedir.
+Format:
+[Adapter:Vatan|Teknosa|Zizigo|Gold|GarantiAltin|IsbankAltin] [url]
 
 Örnek:
-2012-05-09 14:03:10;SAMSUNG S5360 Galaxy Y CEP TELEFONU (GRÝ);472;TL;http//www.vatanbilgisayar.com/products_images/200x200/SAMSUNG/v2-57947.jpg
+Vatan http://www.vatanbilgisayar.com/samsung-ue40d5000-led-tv-full-hd-slim-101cm,-1920x1080,-cmr-100-hz,-4xhdmi,-dlna,-2xusb,-ue40d5000/productdetails.aspx?I_ID=53659
+Teknosa http://www.teknosa.com/kategori/telekom/cep_telefonu/218/145011263/nokia_c601_black_akilli_telefon
+GarantiAltin http://www.teknosa.com/kategori/telekom/cep_telefonu/218/145011263/nokia_c601_black_akilli_telefon
+Zizigo http://www.zizigo.com/markalar/fredperry/fred-perry-121fpeayb9114-21
 
+Jobs dosyasına eklediğiniz işlerle ilgili fiyat toplama işlemini başlatmak için run.sh dosyasını veya "php index.php" komutunu çalıştırınız.
+Elde edilen sonuçları data.csv dosyasından okuyabilirsiniz.
 
+Format:
+[Zaman];[Adapter];[UrunAdi];[Fiyat];[ParaBirimi];[UrunGorseli]
+
+Ornek:
+2012-05-10 16:00:01;GarantiAltin;Altın;91.359;TL;
