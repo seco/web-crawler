@@ -33,7 +33,8 @@ foreach($jobs as $job) {
   $crawlerAdapter = $job[0];
   $url = $job[1];
   $data = $crawler->run($crawlerAdapter, $url);
-  $data = array_merge(array(date('Y-m-d H:i:s')), $data);
+
+  $data = array_merge(array(date('Y-m-d H:i:s'), $crawlerAdapter), $data);
   file_put_contents('data.csv', implode(';', $data) . PHP_EOL, FILE_APPEND);
 }
 ?>
