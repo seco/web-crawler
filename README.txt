@@ -1,20 +1,34 @@
-Web Crawler, popüler bazı elektronik ticaret siteleri ve bankaların spesifik sayfalarındaki ürün fiyatı, adı ve görseli gibi verileri toplamak için kulllanılan veri toplama aracıdır. Araç, Vatan Bilgisayar ürün detayı sayfası, Gold Bilgisayar ürün detayı sayfası, Zizigo ürün detayı sayfası, Garanti Bankası ve İş bankası ana sayfadaki altın fiyatlarını tanımaktadır.
+web-crawler, internette bazı popüler internet sitelerinden fiyat, isim, ürün görseli gibi verileri çekmeniz için geliştirilmiş bir araçtır. Aşağıdaki internet sitelerini desteklemektedir :
+Site                  Sayfa         Adaptör           Veri
+--------------------------------------------------------------
+Vatan Bilgisayar      Ürün Detay    Vatan             Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Gold Bilgisayar       Ürün Detay    Gold              Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Teknosa               Ürün Detay    Teknosa           Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Zizigo                Ürün Detay    Zizigo            Ürün fiyatı, para birimi, tam ürün adı, ürün görseli
+Garanti Bankası       Ana Sayfa     GarantiAltin      Altın Fiyat, para birimi, tam ürün adı
+İş Bankası            Ana Sayfa     IsbankAltin       Altın Fiyat, para birimi, tam ürün adı
 
-Ürün fiyatı toplamak için jobs.csv dosyasına aşağıdaki formatta girdi yapmanız gerekmektedir.
-Format:
-[Adapter:Vatan|Teknosa|Zizigo|Gold|GarantiAltin|IsbankAltin] [url]
+Fiyat verisi almak istediğiniz ürün ile ilgili tanımlamaları configs/jobs.xml dosyasına aşağıdaki şekilde gerçekleştirmelisiniz.
 
-Örnek:
-Vatan http://www.vatanbilgisayar.com/samsung-ue40d5000-led-tv-full-hd-slim-101cm,-1920x1080,-cmr-100-hz,-4xhdmi,-dlna,-2xusb,-ue40d5000/productdetails.aspx?I_ID=53659
-Teknosa http://www.teknosa.com/kategori/telekom/cep_telefonu/218/145011263/nokia_c601_black_akilli_telefon
-GarantiAltin http://www.teknosa.com/kategori/telekom/cep_telefonu/218/145011263/nokia_c601_black_akilli_telefon
-Zizigo http://www.zizigo.com/markalar/fredperry/fred-perry-121fpeayb9114-21
+<?xml version="1.0" encoding="UTF-8"?>
+  <config>
+    <IsbankAltin>
+      <name>İş Bankası Altın Fiyatı</name>
+      <adapter>IsbankAltin</adapter>
+      <url>http://www.isbank.com.tr/</url>
+    </IsbankAltin>
+    <GarantiAltin>
+      <name>Garanti Bankası Altın Fiyatı</name>
+      <adapter>GarantiAltin</adapter>
+      <url>http://realtime.paragaranti.com/asp/xml/icpiyasaX.xml</url>
+    </GarantiAltin>
+  </config>
 
-Jobs dosyasına eklediğiniz işlerle ilgili fiyat toplama işlemini başlatmak için run.sh dosyasını veya "php index.php" komutunu çalıştırınız.
-Elde edilen sonuçları data.csv dosyasından okuyabilirsiniz.
+Veri kaynaklarınızı yukarıdaki şekilde tanımladıktan sonra veri çekme işlemine başlamak için yapmanız gereken tek şey aşağıdaki komutu çalıştırmak.
+php index.php
 
-Format:
-[Zaman];[Adapter];[UrunAdi];[Fiyat];[ParaBirimi];[UrunGorseli]
+Sitelerden dönen tüm veriler data/data.dat dosyasında sekmeyle ayrılmış şekilde yazılacaktır.
+2012-05-13 02:38:37 İş Bankası Altın Fiyatı Altın 90.92 TL  
+2012-05-13 02:38:37 Garanti Bankası Altın Fiyatı  Altın 91.078  TL  
+2012-05-13 02:38:37 Vatan Bilgisayar IPhone Fiyatı  APPLE iPHONE 4 8 GB CEP TELEFONU (S�YAH)  1888  TL  http//www.vatanbilgisayar.com/products_images/200x200/APPLE/v2-57826.jpg
 
-Ornek:
-2012-05-10 16:00:01;GarantiAltin;Altın;91.359;TL;
