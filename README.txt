@@ -11,23 +11,29 @@ Garanti Bankası       Ana Sayfa     GarantiAltin      Altın Fiyat, para birimi
 Fiyat verisi almak istediğiniz ürün ile ilgili tanımlamaları configs/jobs.xml dosyasına aşağıdaki şekilde gerçekleştirmelisiniz.
 
 <?xml version="1.0" encoding="UTF-8"?>
-  <config>
-    <IsbankAltin>
-      <name>İş Bankası Altın Fiyatı</name>
-      <adapter>IsbankAltin</adapter>
-      <url>http://www.isbank.com.tr/</url>
-    </IsbankAltin>
-    <GarantiAltin>
-      <name>Garanti Bankası Altın Fiyatı</name>
-      <adapter>GarantiAltin</adapter>
-      <url>http://realtime.paragaranti.com/asp/xml/icpiyasaX.xml</url>
-    </GarantiAltin>
-  </config>
+<config>
+  <IsbankAltin>
+    <name>İş Bankası Altın Fiyatı</name>
+    <adapter>IsbankAltin</adapter>
+    <url>http://www.isbank.com.tr/</url>
+  </IsbankAltin>
+  <GarantiAltin>
+    <name>Garanti Bankası Altın Fiyatı</name>
+    <adapter>GarantiAltin</adapter>
+    <url>http://realtime.paragaranti.com/asp/xml/icpiyasaX.xml</url>
+  </GarantiAltin>
+  <iPhone>
+    <name>Vatan Bilgisayar IPhone Fiyatı</name>
+    <adapter>Vatan</adapter>
+    <url>http://www.vatanbilgisayar.com/apple-app_iphone4_8_blk-iphone-4-8-gb-cep-telefonu-(siyah)/productdetails.aspx?I_ID=57826</url>
+  </iPhone>
+</config>
+
 
 Veri kaynaklarınızı yukarıdaki şekilde tanımladıktan sonra veri çekme işlemine başlamak için yapmanız gereken tek şey aşağıdaki komutu çalıştırmak.
 php index.php
 
-Sitelerden dönen tüm veriler data/data.dat dosyasında sekmeyle ayrılmış şekilde yazılacaktır.
+Sitelerden dönen tüm veriler data/data.log dosyasında sekmeyle ayrılmış şekilde yazılacaktır.
 2012-05-13 02:38:37 İş Bankası Altın Fiyatı Altın 90.92 TL  
 2012-05-13 02:38:37 Garanti Bankası Altın Fiyatı  Altın 91.078  TL  
 2012-05-13 02:38:37 Vatan Bilgisayar IPhone Fiyatı  APPLE iPHONE 4 8 GB CEP TELEFONU (S�YAH)  1888  TL  http//www.vatanbilgisayar.com/products_images/200x200/APPLE/v2-57826.jpg
