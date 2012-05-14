@@ -29,6 +29,8 @@ class Crawler
   private function logData($data)
   {
     $logText = implode("\t", $data) . PHP_EOL;
+    $customLogText = implode("\t", array($data[0], $data[1], $data['price'], $data['currency']) ) . PHP_EOL;
+    echo $customLogText;
     file_put_contents(APPLICATION_PATH . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'data.log', $logText, FILE_APPEND);
   }
 }
