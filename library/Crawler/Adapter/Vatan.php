@@ -50,7 +50,7 @@ class Crawler_Adapter_Vatan extends Crawler_Adapter_Abstract implements Crawler_
     $contents = $this->_fetchData($url);
     $domain = parse_url($url);
     $data = $this->parseData($contents);
-    $data['image_url'] = $domain['scheme'] . '//' . $domain['host'] . $data['image_url'];
+    $data['image_url'] = $this->_getBaseUrl($url) . $data['image_url'];
     return $data;
 
   }

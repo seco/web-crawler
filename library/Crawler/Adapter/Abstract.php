@@ -2,6 +2,17 @@
 class Crawler_Adapter_Abstract
 {
   /**
+  * returns base url.
+  * @param string $url
+  * @return string
+  */
+  protected function _getBaseUrl($url)
+  {  
+    $domain = parse_url($url);
+    return $data['image_url'] = $domain['scheme'] . '//' . $domain['host'];
+  }
+
+  /**
   * returns site contents.
   * @param string $url
   * @return string

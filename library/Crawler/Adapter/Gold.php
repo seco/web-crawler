@@ -44,7 +44,7 @@ class Crawler_Adapter_Gold extends Crawler_Adapter_Abstract implements Crawler_A
     $contents = $this->_fetchData($url);
     $data = $this->parseData($contents);
     $domain = parse_url($url);
-    $data['image_url'] = $domain['scheme'] . '//' . $domain['host'] . $data['image_url'];
+    $data['image_url'] = $this->_getBaseUrl($url) . $data['image_url'];
     return $data;
   }
 }

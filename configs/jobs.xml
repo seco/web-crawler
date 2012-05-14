@@ -15,4 +15,9 @@
     <adapter>Vatan</adapter>
     <url>http://www.vatanbilgisayar.com/apple-app_iphone4_8_blk-iphone-4-8-gb-cep-telefonu-(siyah)/productdetails.aspx?I_ID=57826</url>
   </iPhone>
+  <iPhoneIstanbulBilisim>
+    <name>Istanbul Bilişim IPhone Fiyatı</name>
+    <adapter>IstanbulBilisim</adapter>
+    <url>http://www.istanbulbilisim.com.tr/iphone-4s-16gb-siyah-apple-iphone-en-ucuz-fiyatlari-kampanyalari,30587.html#TabPanelStart</url>
+  </iPhoneIstanbulBilisim>
 </config>
