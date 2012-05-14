@@ -4,6 +4,7 @@ Site                  Sayfa         Adaptör           Veri
 Vatan Bilgisayar      Ürün Detay    Vatan             Ürün fiyat, para birimi, tam ürün adı, ürün görseli
 Gold Bilgisayar       Ürün Detay    Gold              Ürün fiyat, para birimi, tam ürün adı, ürün görseli
 Teknosa               Ürün Detay    Teknosa           Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+İstanbul Bilişim      Ürün Detayı   IstanbulBilisim   Ürün fiyat, para birimi, tam ürün adı, ürün görseli
 Zizigo                Ürün Detay    Zizigo            Ürün fiyatı, para birimi, tam ürün adı, ürün görseli
 Garanti Bankası       Ana Sayfa     GarantiAltin      Altın Fiyat, para birimi, tam ürün adı
 İş Bankası            Ana Sayfa     IsbankAltin       Altın Fiyat, para birimi, tam ürün adı
