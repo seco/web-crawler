@@ -1,14 +1,15 @@
 web-crawler, internette bazı popüler internet sitelerinden fiyat, isim, ürün görseli gibi verileri çekmeniz için geliştirilmiş bir araçtır. Aşağıdaki internet sitelerini desteklemektedir :
 Site                  Sayfa             Adaptör           Veri
 --------------------------------------------------------------
-Vatan Bilgisayar      Ürün Detay        Vatan             Ürün fiyat, para birimi, tam ürün adı, ürün görseli
-Gold Bilgisayar       Ürün Detay        Gold              Ürün fiyat, para birimi, tam ürün adı, ürün görseli
-Teknosa               Ürün Detay        Teknosa           Ürün fiyat, para birimi, tam ürün adı, ürün görseli
-İstanbul Bilişim      Ürün Detayı       IstanbulBilisim   Ürün fiyat, para birimi, tam ürün adı, ürün görseli
-Zizigo                Ürün Detay        Zizigo            Ürün fiyatı, para birimi, tam ürün adı, ürün görseli
-Garanti Bankası       icpiyasalar.xml   GarantiAltin      Altın Fiyat, para birimi, tam ürün adı
-İş Bankası            Ana Sayfa         IsbankAltin       Altın Fiyat, para birimi, tam ürün adı
-AkBank                yatirimci.akba... AkbankAltin       Altın Fiyat, para birimi, tam ürün adı 
+Vatan Bilgisayar      Ürün Detay        Vatan               Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Gold Bilgisayar       Ürün Detay        Gold                Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Teknosa               Ürün Detay        Teknosa             Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+İstanbul Bilişim      Ürün Detayı       IstanbulBilisim     Ürün fiyat, para birimi, tam ürün adı, ürün görseli
+Zizigo                Ürün Detay        Zizigo              Ürün fiyatı, para birimi, tam ürün adı, ürün görseli
+Garanti Bankası       icpiyasalar.xml   GarantiAltin        Altın Fiyat, para birimi, tam ürün adı
+Hurriyet Piyasa       Ana Sayfa         HurriyetPiyasaAltin Altın Fiyat, para birimi, tam ürün adı
+İş Bankası            Ana Sayfa         IsbankAltin         Altın Fiyat, para birimi, tam ürün adı
+AkBank                yatirimci.akba... AkbankAltin         Altın Fiyat, para birimi, tam ürün adı 
 
 Fiyat verisi almak istediğiniz ürün ile ilgili tanımlamaları configs/jobs.xml dosyasına aşağıdaki şekilde gerçekleştirmelisiniz.
 
@@ -29,6 +30,11 @@ Fiyat verisi almak istediğiniz ürün ile ilgili tanımlamaları configs/jobs.x
     <adapter>AkbankAltin</adapter>
     <url>http://yatirimci.akbank.com.tr/doviz.aspx</url>
   </AkbankAltin>
+  <HurriyetPiyasaAltin>
+    <name>Hürriyet Piyasa Altın Fiyatı</name>
+    <adapter>HurriyetPiyasaAltin</adapter>
+    <url><![CDATA[http://piyasanet.hurriyet.com.tr/doviz-altin/altin/24-ayar-altin-fiyati?period=gunluk&type=XGLD]]></url>
+  </HurriyetPiyasaAltin>
   <VatanIphone>
     <name>Vatan Bilgisayar IPhone Fiyatı</name>
     <adapter>Vatan</adapter>
