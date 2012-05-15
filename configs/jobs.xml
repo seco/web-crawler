@@ -20,6 +20,11 @@
     <adapter>HurriyetPiyasaAltin</adapter>
     <url><![CDATA[http://piyasanet.hurriyet.com.tr/doviz-altin/altin/24-ayar-altin-fiyati?period=gunluk&type=XGLD]]></url>
   </HurriyetPiyasaAltin>
+  <AltinKaynakAltin>
+    <name>Altın Kaynak Altın Fiyatı</name>
+    <adapter>AltinKaynakAltin</adapter>
+    <url>http://www.altinkaynak.com/main_xml/altin.xml</url>
+  </AltinKaynakAltin>
   <VatanIphone>
     <name>Vatan Bilgisayar IPhone Fiyatı</name>
     <adapter>Vatan</adapter>

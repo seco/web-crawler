@@ -6,7 +6,8 @@ Gold Bilgisayar       Ürün Detay        Gold                Ürün fiyat, para
 Teknosa               Ürün Detay        Teknosa             Ürün fiyat, para birimi, tam ürün adı, ürün görseli
 İstanbul Bilişim      Ürün Detayı       IstanbulBilisim     Ürün fiyat, para birimi, tam ürün adı, ürün görseli
 Zizigo                Ürün Detay        Zizigo              Ürün fiyatı, para birimi, tam ürün adı, ürün görseli
-Garanti Bankası       icpiyasalar.xml   GarantiAltin        Altın Fiyat, para birimi, tam ürün adı
+Garanti Bankası       xml               GarantiAltin        Altın Fiyat, para birimi, tam ürün adı
+Altın Kaynak          xml               AltinKaynakAltin    Altın Fiyat, para birimi, tam ürün adı
 Hurriyet Piyasa       Ana Sayfa         HurriyetPiyasaAltin Altın Fiyat, para birimi, tam ürün adı
 İş Bankası            Ana Sayfa         IsbankAltin         Altın Fiyat, para birimi, tam ürün adı
 AkBank                yatirimci.akba... AkbankAltin         Altın Fiyat, para birimi, tam ürün adı 
@@ -35,6 +36,11 @@ Fiyat verisi almak istediğiniz ürün ile ilgili tanımlamaları configs/jobs.x
     <adapter>HurriyetPiyasaAltin</adapter>
     <url><![CDATA[http://piyasanet.hurriyet.com.tr/doviz-altin/altin/24-ayar-altin-fiyati?period=gunluk&type=XGLD]]></url>
   </HurriyetPiyasaAltin>
+  <AltinKaynakAltin>
+    <name>Altın Kaynak Altın Fiyatı</name>
+    <adapter>AltinKaynakAltin</adapter>
+    <url>http://www.altinkaynak.com/main_xml/altin.xml</url>
+  </AltinKaynakAltin>
   <VatanIphone>
     <name>Vatan Bilgisayar IPhone Fiyatı</name>
     <adapter>Vatan</adapter>
