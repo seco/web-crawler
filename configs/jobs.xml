@@ -45,4 +45,9 @@
     <adapter>Teknosa</adapter>
     <url>http://www.teknosa.com/kategori/ses_ve_goruntu/lcd_tv/853/110012195/samsung_40d5500_fhd_led_lcd_tv</url>
   </TeknosaTv>
+  <DartyTelefon>
+    <name>Darty Samsung Telefon Fiyatı</name>
+    <adapter>Darty</adapter>
+    <url>http://www.darty.com.tr/e_commerce/SmartPhone/SAMSUNG/GT-I9100G-GALAXY-S-II-E-p-61377-c-12.htm</url>
+  </DartyTelefon>
  </config>
