@@ -15,6 +15,11 @@
     <adapter>AkbankAltin</adapter>
     <url>http://yatirimci.akbank.com.tr/doviz.aspx</url>
   </AkbankAltin>
+  <HurriyetPiyasaAltin>
+    <name>Hürriyet Piyasa Altın Fiyatı</name>
+    <adapter>HurriyetPiyasaAltin</adapter>
+    <url><![CDATA[http://piyasanet.hurriyet.com.tr/doviz-altin/altin/24-ayar-altin-fiyati?period=gunluk&type=XGLD]]></url>
+  </HurriyetPiyasaAltin>
   <VatanIphone>
     <name>Vatan Bilgisayar IPhone Fiyatı</name>
     <adapter>Vatan</adapter>
