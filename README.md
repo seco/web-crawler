@@ -43,20 +43,28 @@ WebCrawler is simple xpath based crawler library for PHP developers.
 -  Use it!
 
 ```php
-<?php
-require('vendor/autoload.php');
+	<?php
+	require('vendor/autoload.php');
 
-use WebCrawler\Crawler;
-use WebCrawler\Resource\SampleResource;
+	use WebCrawler\Crawler;
+	use WebCrawler\Resource\SampleResource;
 
-$crawler = new Crawler();
-$resource = new SampleResource(
-	'http://www.vatanbilgisayar.com/' .
-	'iphone-6-16-gb-akilli-telefon-silver.html#genel-bakis'
-);
-$crawler->crawleResource($resource);
+	$crawler = new Crawler();
+	$resource = new SampleResource(
+		'http://www.vatanbilgisayar.com/' .
+		'iphone-6-16-gb-akilli-telefon-silver.html#genel-bakis'
+	);
+	$crawler->crawleResource($resource);
 
-print $resource->getPrice() . PHP_EOL;
-print $resource->getImageUrl() . PHP_EOL;
+	print $resource->getPrice() . PHP_EOL;
+	print $resource->getImageUrl() . PHP_EOL;
+
+```
+
+Output:
+
+```
+	2.349
+	http://www.vatanbilgisayar.com/UPLOAD/PRODUCT/APPLE/Thumb/v2-74694-4_medium.jpg
 
 ```
