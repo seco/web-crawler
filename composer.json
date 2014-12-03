@@ -1,0 +1,16 @@
+{
+	"name": "WebCrawler",
+	"description": "XPath based web crawler library.",
+	"autoload": {
+		"psr-0": {
+			"WebCrawler": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "İbrahim Gündüz",
+			"email": "ibrahimgunduz34@gmail.com",
+			"homepage": "http://www.ibrahimgunduz.net/"
+		}
+	]
+}
